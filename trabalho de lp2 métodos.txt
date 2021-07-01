@@ -30,10 +30,6 @@ public class LP2_Trabalho
     static List<Player> Players = new List<Player>();
 
 
-
-
-
-
     public static void Main(string[] args)
     {
        
@@ -46,21 +42,10 @@ public class LP2_Trabalho
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
     private static void CreatePlayer(){
 
                 Console.Clear();            
-                Console.Write("Insira um Nickname : ");
+                Console.Write("Escreva um Nickname : ");
                 var PlayerName = Console.ReadLine();
                 PlayerName = PlayerName.ToLower();
 
@@ -83,21 +68,6 @@ public class LP2_Trabalho
     }
 
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private static void ViewPlayers(){
 
@@ -117,24 +87,6 @@ public class LP2_Trabalho
                 Console.Write("Pressione qualquer tecla para sair...");
                 Console.ReadKey();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     private static void CheckInv(){
@@ -167,35 +119,6 @@ public class LP2_Trabalho
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private static void StoreManager(
       
         Item Espada_Vendaval_StoreManager, 
@@ -213,14 +136,7 @@ public class LP2_Trabalho
             Console.WriteLine("Digite o nome do jogador que irá acessar a loja: ");
             var PlayerName = Console.ReadLine();
             PlayerName = PlayerName.ToLower();
-      
-      
-      
-      
-      
-      
-      
-      
+       
             foreach(Player p in Players)
             {
                 if(p.nome == PlayerName)
@@ -239,24 +155,7 @@ public class LP2_Trabalho
                     Console.WriteLine("");
                     var ic = Console.ReadLine();
                  
-                 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     
                     if( ic == Espada_Vendaval_StoreManager.Id.ToString() ){
 
                         Console.WriteLine("Você gostaria de comprar " + Espada_Vendaval_StoreManager.Nome + " por " + Espada_Vendaval_StoreManager.Preco + "G? (S)/(N)");
@@ -289,28 +188,6 @@ public class LP2_Trabalho
                     }//END ELSE IF
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     else if(ic == Adagas_Navori_StoreManager.Id.ToString())
                     {
                         Console.WriteLine("Você gostaria de comprar " + Adagas_Navori_StoreManager.Nome + " por " + Adagas_Navori_StoreManager.Preco + "G? (S)/(N)");
@@ -340,29 +217,6 @@ public class LP2_Trabalho
                                 Console.Read();
                            }//END ELSE 
                     }//END ELSE IF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                     else if(ic == Espada_Do_Rei_Destruído_StoreManager.Id.ToString())
                     {
@@ -397,27 +251,6 @@ public class LP2_Trabalho
                     }//END ELSE IF
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     else if(ic == Arco_Escudo_Imoral_StoreManager.Id.ToString())
                     {
                        Console.WriteLine("Você gostaria de comprar " + Arco_Escudo_Imoral_StoreManager.Nome + " por " + Arco_Escudo_Imoral_StoreManager.Preco + "G? (S)/(N)");
@@ -448,19 +281,6 @@ public class LP2_Trabalho
                                 Console.Read();
                            }//END ELSE 
                     }//END ELSE IF
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -498,11 +318,6 @@ public class LP2_Trabalho
                     }//END ELSE IF
 
 
-
-
-
-
-
                     else{
                     Console.Clear();
                     Console.WriteLine("Nenhum jogador encontrado...");
@@ -519,84 +334,57 @@ public class LP2_Trabalho
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private static bool MenuPrincipal()
     {
 
             Item Espada_Vendaval = new Item();
             Espada_Vendaval.Id = 1;
             Espada_Vendaval.Nome = "Vendaval";
-            Espada_Vendaval.Preco = 55;
+            Espada_Vendaval.Preco = 65;
             Espada_Vendaval.Desc = "(+30% VELOCIDADE DE ATAQUE)";
 
             Item Adagas_Navori = new Item();
             Adagas_Navori.Id = 2;
             Adagas_Navori.Nome = "Adagas Navori";
-            Adagas_Navori.Preco = 100;
+            Adagas_Navori.Preco = 200;
             Adagas_Navori.Desc = "(+10% DANO DE ATAQUE)";
 
             Item Espada_Do_Rei_Destruído = new Item();
             Espada_Do_Rei_Destruído.Id = 3;
             Espada_Do_Rei_Destruído.Nome = "Espada Do Rei Destruído";
-            Espada_Do_Rei_Destruído.Preco = 20;
+            Espada_Do_Rei_Destruído.Preco = 30;
             Espada_Do_Rei_Destruído.Desc = "(CAUSA +15% DO DANO EQUIVALENTE A VIDA MÁXIMA RESTANTE DO ALVO)";
 
             Item Arco_Escudo_Imoral = new Item();
             Arco_Escudo_Imoral.Id = 4;
             Arco_Escudo_Imoral.Nome = "Arco Escudo Imoral";
-            Arco_Escudo_Imoral.Preco = 90;
+            Arco_Escudo_Imoral.Preco = 60;
             Arco_Escudo_Imoral.Desc = "(+20% CHANCE DE ACERTO CRÍTICO)";
 
             Item Gume_Do_Infinito = new Item();
             Gume_Do_Infinito.Id = 5;
             Gume_Do_Infinito.Nome = "Gume do infiníto";
-            Gume_Do_Infinito.Preco = 75;
+            Gume_Do_Infinito.Preco = 85;
             Gume_Do_Infinito.Desc = "(+40% DANO DE ACERTO CRÍTICO)";
 
 
        
 
-
         Console.Clear();
-        Console.WriteLine("==================================================================");
-        Console.WriteLine("Entre com '1' para criar um jogador (necessário para entrar na loja).");
-        Console.WriteLine("Entre com '2' para checar as informações de todos os jogadores criados.");
+        Console.WriteLine("Entre com '1' para checar um jogador (necessário para entrar na loja).");
+        Console.WriteLine("Entre com '2' para criar as informações de todos os jogadores criados.");
         Console.WriteLine("Entre com '3' para olhar o seu inventário.");
         Console.WriteLine("Entre com '4' para entrar na loja.");
         Console.WriteLine("Entre com '5' para encerrar o programa.");
-        Console.WriteLine("==================================================================");
         switch (Console.ReadLine())
         {
             case "1":
-            CreatePlayer();
+            ViewPlayer();
             return true;//END CASE (SWITCH)
 
 
             case "2":
-            ViewPlayers();
+            CreatePlayers();
             return true;//END CASE (SWITCH)
     
 
